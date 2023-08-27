@@ -1,0 +1,17 @@
+<div class="user-form">
+    <h2>{{ formTitle }}</h2>
+    <form (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <input matInput placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" [(ngModel)]="user.lastName" name="lastName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="user.email" name="email" required email>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">{{ actionText }}</button>
+      <button mat-raised-button color="warn" (click)="cancelForm()">Cancel</button>
+    </form>
+  </div>
+  

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'UserManagementApp';
+  users: User[] = []; // Initialize with an empty array or dummy data
+
+  addUser(newUser: User): void {
+    this.users.push(newUser); // Make sure this line adds the user
+  }
 }
